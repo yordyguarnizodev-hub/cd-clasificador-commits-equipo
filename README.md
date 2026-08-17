@@ -12,23 +12,18 @@ El proyecto **Clasificador de mensajes de commit** es una API REST desarrollada 
 
 Los integrantes del equipo que participaron en el desarrollo del proyecto son:
 
-- **Integrante 1:** [Nombre del integrante]
-- **Integrante 2:** [Nombre del integrante]
-- **Integrante 3:** [Nombre del integrante]
-- **Integrante 4:** [Nombre del integrante]
-
-> Completar esta sección con los nombres reales de los integrantes antes de la entrega final.
+- **Integrante 1:** Yordy Daniel Guarnizo Gomez
 
 ### 2.2 Perfil de hardware utilizado
 
 Durante las pruebas realizadas sobre el equipo de desarrollo se contó con aproximadamente:
 
-- **Memoria RAM:** 15 GiB.
+- **Memoria RAM:** 16 GiB.
 - **Memoria disponible durante las pruebas:** aproximadamente 10 GiB.
 - **Memoria libre durante la medición:** aproximadamente 4.6 GiB.
 - **Memoria Swap:** 3.7 GiB.
 - **Swap utilizada durante la medición:** 0 B.
-- **Sistema operativo:** Linux.
+- **Sistema operativo:** Ubuntu.
 - **Python:** 3.12.3.
 - **Docker:** utilizado para ejecutar la API y PostgreSQL.
 - **Ollama:** utilizado para ejecutar localmente el modelo `qwen2.5-coder:1.5b`.
