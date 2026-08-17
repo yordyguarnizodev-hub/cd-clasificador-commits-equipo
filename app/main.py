@@ -8,6 +8,7 @@ import psycopg2
 import requests
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
+from psycopg2 import OperationalError
 from pydantic import BaseModel
 
 load_dotenv()
@@ -49,19 +50,18 @@ def conexion():
 
 def registrar(motor, modelo, entrada, salida, latencia_ms):
     """Guarda la inferencia en la base de datos."""
-    with conexion() as con:
-        with con.cursor() as cur:
-            cur.execute(
-                "INSERT INTO inferencias (motor, modelo, entrada, salida, latencia_ms)"
-                " VALUES (%s, %s, %s, %s, %s)",
-                (
-                    motor,
-                    modelo,
-                    entrada,
-                    salida,
-                    int(latencia_ms),
-                ),
-            )
+    with conexion() as con, con.cursor() as cur:
+        cur.execute(
+            "INSERT INTO inferencias (motor, modelo, entrada, salida, latencia_ms)"
+            " VALUES (%s, %s, %s, %s, %s)",
+            (
+                motor,
+                modelo,
+                entrada,
+                salida,
+                int(latencia_ms),
+            ),
+        )
 
 def clasificar_eco(texto: str) -> str:
     """Motor por reglas: línea base sin modelo, no consume memoria."""
@@ -127,7 +127,7 @@ def health():
             "base_datos": "ok",
         }
 
-    except Exception:
+    except OperationalError:
         raise HTTPException(
             status_code=503,
             detail="Base de datos no disponible",
