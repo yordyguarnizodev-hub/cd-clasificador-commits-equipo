@@ -746,26 +746,7 @@ La solución presenta las siguientes limitaciones:
 
 ---
 
-## 15. Video de demostración
-
-Video de demostración del funcionamiento de la solución:
-
-**[PEGAR AQUÍ EL ENLACE AL VIDEO DE DEMOSTRACIÓN]**
-
-El video debe mostrar como mínimo:
-
-1. Levantamiento de los servicios mediante Docker Compose.
-2. Estado de los contenedores.
-3. Consulta de `GET /health`.
-4. Clasificación mediante `POST /clasificar`.
-5. Consulta de `GET /inferencias`.
-6. Funcionamiento del motor ECO.
-7. Funcionamiento del motor Ollama.
-8. Evidencia de las pruebas realizadas.
-
----
-
-## 16. Versión final
+## 15. Versión final
 
 La versión final de entrega corresponde a:
 
@@ -775,7 +756,7 @@ Esta versión representa la entrega estable del sistema después de completar la
 
 ---
 
-## 17. Estado del proyecto
+## 16. Estado del proyecto
 
 El proyecto se encuentra preparado para la etapa final de entrega.
 
